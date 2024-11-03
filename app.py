@@ -2,6 +2,12 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+@app.route('/', methods=['GET'])
+def get_items():
+    return jsonify({
+            "message": "Server is running succesfully !"
+        })
+
 @app.route('/api/v1/calculate_profit', methods=['POST'])
 def calculate_profit():
     try:
