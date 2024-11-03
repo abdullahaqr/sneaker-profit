@@ -74,5 +74,6 @@ def calculate_profit():
         return jsonify({"error": "An unexpected error occurred", "details": str(e)}), 500  # Internal Server Error
 
 if __name__ == '__main__':
-    app.run(debug=True, use_reloader=False)
+    # app.run(debug=True, use_reloader=False)
+    app.run(debug=True, use_reloader=False, host='0.0.0.0')
     # app.run()
